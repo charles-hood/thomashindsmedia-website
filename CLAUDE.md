@@ -7,6 +7,8 @@ This is a complete redesign of thomashindsmedia.com for Thomas Hinds, a solo aco
 **Hero tagline:** "Solo Acoustic Artist & Poetic Troubadour"
 **Hero subtitle:** "Songs of life, love & finding oneself" (from his legacy bio)
 
+**Repository:** https://github.com/charles-hood/thomashindsmedia-website
+
 ## Goals
 
 1. **Modernize the design** - Create a professional, dark/warm aesthetic fitting the troubadour brand
