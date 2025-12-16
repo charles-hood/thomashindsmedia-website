@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Hinds - Technical Rider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: letter;
+            margin: 0.6in;
+        }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 10pt;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: white;
+        }
+
+        .rider {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .artist-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .document-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #666;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 1.25rem;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            background: #1a1a1a;
+            color: white;
+            padding: 0.35rem 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-content {
+            padding: 0 0.25rem;
+        }
+
+        /* Overview grid */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .overview-box h4 {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .overview-box p {
+            font-size: 0.9rem;
+        }
+
+        .config-list {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .config-list li {
+            font-size: 0.85rem;
+            padding: 0.2rem 0.5rem;
+            background: #f0f0f0;
+            border-radius: 3px;
+        }
+
+        .config-list li.primary {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        /* Requirements lists */
+        .req-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .req-box h4 {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .req-box ul {
+            list-style: none;
+            font-size: 0.85rem;
+        }
+
+        .req-box li {
+            padding: 0.2rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .req-box li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        .req-note {
+            font-size: 0.75rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 0.25rem;
+        }
+
+        /* Stage Plot */
+        .stage-plot {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .stage-plot-title {
+            text-align: center;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #666;
+            margin-bottom: 0.75rem;
+        }
+
+        .stage-diagram {
+            position: relative;
+            height: 180px;
+            background: white;
+            border: 2px solid #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .audience-label {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #999;
+        }
+
+        .stage-item {
+            position: absolute;
+            text-align: center;
+            font-size: 0.65rem;
+        }
+
+        .stage-item .icon {
+            width: 36px;
+            height: 36px;
+            border: 2px solid #1a1a1a;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.25rem;
+            font-size: 0.6rem;
+            font-weight: 600;
+            background: white;
+        }
+
+        .stage-item.monitor .icon {
+            width: 50px;
+            height: 24px;
+            border-radius: 2px;
+        }
+
+        .stage-item.artist .icon {
+            border-radius: 50%;
+            background: #1a1a1a;
+            color: white;
+            width: 44px;
+            height: 44px;
+        }
+
+        .monitor { top: 30px; left: 50%; transform: translateX(-50%); }
+        .mic { top: 70px; left: 35%; }
+        .artist { top: 65px; left: 50%; transform: translateX(-50%); }
+        .guitar-stand { top: 70px; right: 30%; }
+        .table { bottom: 25px; left: 25%; }
+        .di-box { bottom: 25px; right: 30%; }
+
+        .stage-legend {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.65rem;
+            color: #666;
+        }
+
+        /* Two column layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* Backline */
+        .backline-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .backline-box h4 {
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .backline-box ul {
+            list-style: none;
+            font-size: 0.8rem;
+        }
+
+        .backline-box li {
+            padding: 0.15rem 0;
+        }
+
+        /* Contact footer */
+        .contact-footer {
+            margin-top: 1rem;
+            padding-top: 0.75rem;
+            border-top: 2px solid #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            font-size: 0.8rem;
+        }
+
+        .contact-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #666;
+        }
+
+        .contact-email {
+            font-weight: 600;
+        }
+
+        .website {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .note-box {
+            background: #f8f8f8;
+            border-left: 3px solid #1a1a1a;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8rem;
+            font-style: italic;
+            color: #444;
+        }
+
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .rider { padding: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="rider">
+        <header class="header">
+            <h1 class="artist-name">Thomas Hinds</h1>
+            <p class="document-title">Technical Rider & Stage Requirements</p>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Overview</h2>
+            <div class="section-content">
+                <div class="overview-grid">
+                    <div class="overview-box">
+                        <h4>Performance Configurations</h4>
+                        <ul class="config-list">
+                            <li class="primary">Solo</li>
+                            <li>Duo</li>
+                            <li>Trio</li>
+                            <li>Full Band</li>
+                        </ul>
+                        <p class="req-note">This rider covers solo setup. Contact for larger configurations.</p>
+                    </div>
+                    <div class="overview-box">
+                        <h4>Timing</h4>
+                        <p><strong>Set Length:</strong> 45-90 minutes (negotiable)</p>
+                        <p><strong>Setup:</strong> 15-20 minutes</p>
+                        <p><strong>Soundcheck:</strong> 20-30 minutes preferred</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Sound Requirements</h2>
+            <div class="section-content">
+                <div class="req-grid">
+                    <div class="req-box">
+                        <h4>Vocals</h4>
+                        <ul>
+                            <li>Quality vocal microphone on boom stand</li>
+                            <li>Preferred: Shure SM58, Sennheiser e835</li>
+                            <li>Condenser acceptable for quiet rooms</li>
+                        </ul>
+                    </div>
+                    <div class="req-box">
+                        <h4>Acoustic Guitar</h4>
+                        <ul>
+                            <li>Active DI box for guitar pickup</li>
+                            <li>Preferred: Radial J48, Countryman Type 85</li>
+                            <li>Guitar cable provided by artist</li>
+                        </ul>
+                    </div>
+                    <div class="req-box">
+                        <h4>Monitors</h4>
+                        <ul>
+                            <li>One floor wedge monitor</li>
+                            <li>Mix: vocals prominent, guitar for pitch</li>
+                            <li>IEM not required but can accommodate</li>
+                        </ul>
+                    </div>
+                    <div class="req-box">
+                        <h4>Stage</h4>
+                        <ul>
+                            <li>Minimum 8' x 8' performance area</li>
+                            <li>Stool or armless chair</li>
+                            <li>Small table for water/setlist</li>
+                            <li>Guitar stand</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Stage Plot</h2>
+            <div class="section-content">
+                <div class="stage-plot">
+                    <div class="stage-diagram">
+                        <span class="audience-label">[ Audience ]</span>
+                        <div class="stage-item monitor">
+                            <div class="icon">MON</div>
+                            <span>Monitor</span>
+                        </div>
+                        <div class="stage-item mic">
+                            <div class="icon">MIC</div>
+                            <span>Vocal</span>
+                        </div>
+                        <div class="stage-item artist">
+                            <div class="icon">TH</div>
+                            <span>Artist</span>
+                        </div>
+                        <div class="stage-item guitar-stand">
+                            <div class="icon">GTR</div>
+                            <span>Stand</span>
+                        </div>
+                        <div class="stage-item table">
+                            <div class="icon">TBL</div>
+                            <span>Table</span>
+                        </div>
+                        <div class="stage-item di-box">
+                            <div class="icon">DI</div>
+                            <span>DI Box</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Backline</h2>
+            <div class="section-content">
+                <div class="backline-grid">
+                    <div class="backline-box">
+                        <h4>Artist Provides</h4>
+                        <ul>
+                            <li>✓ Acoustic guitar(s)</li>
+                            <li>✓ Guitar cables</li>
+                            <li>✓ Capos, picks, spare strings</li>
+                            <li>✓ Tuner</li>
+                        </ul>
+                    </div>
+                    <div class="backline-box">
+                        <h4>Venue Provides</h4>
+                        <ul>
+                            <li>✓ PA system for room</li>
+                            <li>✓ Vocal mic & stand</li>
+                            <li>✓ DI box</li>
+                            <li>✓ Monitor wedge</li>
+                            <li>✓ Basic stage lighting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="note-box">
+                This rider is a guideline. Thomas is an experienced touring performer accustomed to adapting to various venue situations. Please reach out with any questions—we're happy to work with you.
+            </div>
+        </section>
+
+        <footer class="contact-footer">
+            <div class="contact-info">
+                <div class="contact-label">Booking & Technical Questions</div>
+                <div class="contact-email">thomashindsschedule@gmail.com</div>
+            </div>
+            <div class="website">thomashindsmedia.com</div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Python virtual environment
+.venv/
+
+# Claude Code
+.claude/
+
+# macOS
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
