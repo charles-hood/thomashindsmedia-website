@@ -35,22 +35,29 @@ threfresh/
 ├── js/
 │   └── main.js             # Interactivity, scroll animations
 ├── images/
-│   ├── hero-bg.jpg               # From legacy site
+│   ├── hero-bg.jpg               # Hotel room shot (Dec 2025 update)
 │   ├── logo.png                  # From legacy site (white TH logo)
-│   ├── thomas-portrait.jpg       # From CanvasRebel interview
-│   ├── thomas-press-1.jpg        # Additional press photo
+│   ├── thomas-about.jpg          # Colorful floral backdrop (for About section)
+│   ├── thomas-bio.jpg            # Honky-tonk live shot (for Portrait download)
+│   ├── thomas-press-new.jpg      # Blue stage shot (for Press Photo download)
+│   ├── thomas-portrait.jpg       # From CanvasRebel interview (legacy)
+│   ├── thomas-press-1.jpg        # Additional press photo (legacy)
+│   ├── thomas-headshot-bw.jpg    # B&W headshot
+│   ├── thomas-live-stage.jpg     # Blue stage performance shot
+│   ├── album-hotel-room-songs.jpg # 2026 upcoming album art
 │   ├── album-along-the-road.jpg  # 2025 live album
 │   ├── album-where-do-we-go.jpg  # 2023 FAME Studios album
 │   ├── album-heart-attacks.jpg   # 2022 EP
-│   └── album-resurrection-road.jpg # 2019 album
+│   └── album-resurrection-road.jpg # 2019 album (removed from site, kept in repo)
 ├── press/                  # EPK downloadable assets
 │   ├── bio-short.txt       # ~100 word bio
 │   ├── bio-long.txt        # Full bio with discography, links
-│   ├── tech-rider.txt      # Plain text version (backup)
-│   ├── tech-rider.html     # Styled HTML version
-│   ├── tech-rider.pdf      # Professional PDF with stage plot
+│   ├── epk.html            # Full EPK one-pager (for Thomas to use)
+│   ├── epk.pdf             # PDF version of EPK
 │   ├── one-sheet.html      # Styled HTML one-pager
-│   └── one-sheet.pdf       # PDF version
+│   ├── one-sheet.pdf       # PDF version
+│   ├── tech-rider.html     # Styled HTML version (removed from site)
+│   └── tech-rider.pdf      # PDF with stage plot (removed from site)
 ├── favicon-16.png          # Browser favicon (small)
 ├── favicon-32.png          # Browser favicon (standard)
 ├── apple-touch-icon.png    # iOS home screen icon
@@ -91,11 +98,11 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 
 | Section | Purpose |
 |---------|---------|
-| Hero | Full-screen intro with streaming links, CTAs, staggered animations |
-| Music | 4-album grid with Spotify embed |
-| Tour | Date cards (placeholder), Bandsintown integration ready |
-| About | Bio, stats, portrait photo, links to two books and poetry page |
-| Press/EPK | Downloadable bios (TXT), press photos (JPG), tech rider (PDF), one-sheet (HTML+PDF) |
+| Hero | Full-screen intro with streaming links, CTAs, moody hotel room background |
+| Music | 4-album grid (Hotel Room Songs coming soon, plus 3 releases) with Spotify embed |
+| Tour | Bandsintown widget only (no hardcoded dates) |
+| About | Bio, stats (500K miles, #86 charts, 2 books), portrait photo, links to books and poetry page |
+| Press/EPK | Downloadable bios (TXT), press photos (JPG), one-sheet (HTML+PDF) |
 | Videos | Featured video + YouTube channel embed |
 | Newsletter | Email signup form (needs backend connection) |
 | Contact | Booking email, contact form, social links, house concerts mentioned |
@@ -103,7 +110,6 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 ## Real Content Sources
 
 ### From Legacy Site (thomashindsmedia.com)
-- Hero background image
 - White logo PNG
 - Booking email: thomashindsschedule@gmail.com
 - Extended bio text (used for long bio, about section)
@@ -114,7 +120,20 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 - Recording info: FAME Studios acoustic track + Miles Landrum (West End Sound) in Atlanta
 - Second book: In The Details (2024 second edition)
 - New YouTube video: https://youtu.be/wpLapaf7ElQ
-- New press photos: Google Drive folder (to be downloaded)
+- New press photos from Google Drive folder:
+  - 80714D85 → hero-bg.jpg (moody hotel room shot)
+  - IMG_1127 → thomas-about.jpg (colorful floral backdrop)
+  - IMG_5309 → thomas-bio.jpg (honky-tonk live shot)
+  - th 7 color-High-3264 → thomas-press-new.jpg (blue stage shot)
+  - phonto 31 → album-hotel-room-songs.jpg (album art)
+  - DSC09301_b&w → thomas-headshot-bw.jpg (B&W headshot)
+- Technical rider removed from site (per Thomas's request)
+- Bookings go directly through Thomas (not through manager)
+
+### From Thomas's EPK PDF
+- Manager: Erin at Grace Under Pressure Management (erin@graceunderpressuremanagement.com, 845.544.3074)
+  - Note: Bookings still go through Thomas directly
+- Little Star PR quote: "Thomas Hinds creates a one-of-a-kind amalgamation of sounds, with organ lines that are somehow both mellow and wailing alongside flowing streams of steel string slides and fingerpicked guitars."
 
 ### From Spotify
 - Artist ID: 7wOxMZgaCVFRwfRT9tvqDH
@@ -124,7 +143,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 - Album artwork for all releases
 
 ### From CanvasRebel Interview
-- Press photos
+- Press photos (legacy)
 - Bio details: 500K miles over 6 years, SXSW 2024, #86 Americana charts
 - YouTube channel ID: UC8-LYxz-roWjmf31PY48R4g
 
@@ -158,11 +177,13 @@ Created downloadable Electronic Press Kit materials:
 |-------|--------|-------|
 | Short Bio | TXT | ~100 words, contact info |
 | Long Bio | TXT | Full bio, discography, all links, booking info |
-| Tech Rider | PDF | Stage plot visual, sound requirements, flexible configs (solo/duo/trio/band) |
+| EPK | HTML + PDF | Full one-page EPK for Thomas to send to venues (press/epk.pdf) |
 | One Sheet | HTML + PDF | Photo, bio, quotes, stats, streaming links, contact |
-| Press Photos | JPG | Portrait and press photo, downloadable with clean filenames |
+| Press Photos | JPG | Portrait (thomas-bio.jpg) and Press Photo (thomas-press-new.jpg) |
 
-**Note on formats:** Bios kept as TXT for easy copy/paste. Tech rider and one-sheet as PDF for professional appearance. One-sheet also available as HTML for web viewing.
+**Note on formats:** Bios kept as TXT for easy copy/paste. EPK and one-sheet as PDF for professional appearance.
+
+**Technical Rider:** Removed from website per Thomas's request (files still exist in repo but not linked).
 
 ## Key Decisions & Rationale
 
@@ -182,15 +203,15 @@ Created downloadable Electronic Press Kit materials:
 - TXT is universally accessible, no formatting issues
 - PDF would require extra steps to extract text
 
-### Why PDF for tech rider
-- Industry standard - venues expect formatted document
-- Stage plot diagram needs visual presentation
-- Looks professional, prints cleanly
+### Why Bandsintown only for tour dates
+- Thomas manages his own shows through Bandsintown
+- No need to maintain hardcoded dates that go stale
+- Widget auto-updates when Thomas adds shows
 
 ### Booking flexibility
 - Thomas can perform: solo (most common), duo, trio, or full band
-- Tech rider notes this with contact info for larger configurations
 - House concerts explicitly mentioned in contact section
+- Bookings go directly through Thomas (thomashindsschedule@gmail.com)
 
 ## Running Locally
 
@@ -209,7 +230,7 @@ cd /Users/charles/Projects/threfresh
 source .venv/bin/activate
 python3 << 'EOF'
 from weasyprint import HTML
-HTML('press/tech-rider.html').write_pdf('press/tech-rider.pdf')
+HTML('press/epk.html').write_pdf('press/epk.pdf')
 HTML('press/one-sheet.html').write_pdf('press/one-sheet.pdf')
 print("PDFs regenerated")
 EOF
@@ -217,17 +238,19 @@ EOF
 
 ## Next Steps / TODO
 
-- [x] ~~Add real tour dates~~ ✓ Done (Dec 19 Round Trip Brewing)
+- [x] ~~Add real tour dates~~ ✓ Replaced with Bandsintown widget
 - [x] ~~Update bio with Thomas's December 2025 revisions~~ ✓ Done (500K miles, Hotel Room Songs, second book)
-- [ ] Download new press photos from Google Drive folder
+- [x] ~~Download new press photos from Google Drive folder~~ ✓ Done
+- [x] ~~Create downloadable EPK assets~~ ✓ Done
+- [x] ~~Add favicon~~ ✓ Done (TH logo on dark background)
+- [x] ~~Integrate Bandsintown dates~~ ✓ Done (widget active, Thomas adding shows)
+- [x] ~~Create EPK PDF for Thomas~~ ✓ Done (press/epk.pdf)
+- [x] ~~Add Hotel Room Songs coming soon~~ ✓ Done (featured album position)
+- [x] ~~Update hero image~~ ✓ Done (moody hotel room shot)
 - [ ] Connect newsletter form to Mailchimp/ConvertKit
 - [ ] Connect contact form to Formspree or similar
 - [ ] Optimize images for web (compress)
-- [ ] Deploy to hosting (Netlify, Vercel, GitHub Pages, etc.)
 - [ ] Consider adding social feed (Juicer.io) - tabled for now, may add later
-- [x] ~~Create downloadable EPK assets~~ ✓ Done
-- [x] ~~Add favicon~~ ✓ Done (TH logo on dark background)
-- [ ] Integrate Bandsintown dates (Thomas adding shows soon)
 
 ## Research Sources
 
@@ -240,4 +263,4 @@ EOF
 
 ---
 
-*Last updated: December 2025*
+*Last updated: December 17, 2025*
