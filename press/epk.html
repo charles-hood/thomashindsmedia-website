@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Hinds - Electronic Press Kit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Libre+Franklin:wght@400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: letter;
+            margin: 0;
+            background: #0a0908;
+        }
+
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            background: #0a0908;
+            color: #e8e4df;
+            line-height: 1.5;
+            font-size: 10pt;
+        }
+
+        .epk {
+            width: 8.5in;
+            margin: 0 auto;
+            background: #0a0908;
+        }
+
+        /* Header with photo */
+        .header {
+            position: relative;
+            height: 3in;
+            overflow: hidden;
+        }
+
+        .header-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            filter: brightness(0.7);
+        }
+
+        .header-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0.3in 0.5in;
+            background: linear-gradient(transparent, rgba(10,9,8,0.9) 60%, #0a0908);
+        }
+
+        .genre-label {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #c9a66b;
+            margin-bottom: 0.25rem;
+        }
+
+        .artist-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            margin-bottom: 0.15rem;
+        }
+
+        .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #a39e96;
+        }
+
+        /* Main content */
+        .content {
+            padding: 0.25in 0.5in;
+        }
+
+        .two-column {
+            display: flex;
+            gap: 0.3in;
+        }
+
+        .column-main {
+            flex: 1.3;
+        }
+
+        .column-side {
+            flex: 1;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            color: #c9a66b;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.2rem;
+            border-bottom: 1px solid #2a2622;
+        }
+
+        .bio {
+            font-size: 0.8rem;
+            color: #c9c4bc;
+            line-height: 1.5;
+            margin-bottom: 0.2in;
+        }
+
+        .bio p {
+            margin-bottom: 0.35rem;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            gap: 0.2in;
+            margin-bottom: 0.2in;
+            padding: 0.2in;
+            background: #151311;
+        }
+
+        .stat {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            color: #c9a66b;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #6b6560;
+        }
+
+        /* Quotes */
+        .quotes {
+            margin-bottom: 0.2in;
+        }
+
+        .quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
+            padding-left: 0.4rem;
+            border-left: 2px solid #3d3426;
+            color: #c9c4bc;
+        }
+
+        .quote cite {
+            font-style: normal;
+            font-size: 0.65rem;
+            color: #6b6560;
+            display: block;
+            margin-top: 0.15rem;
+        }
+
+        /* Discography */
+        .discography {
+            margin-bottom: 0.2in;
+        }
+
+        .album-list {
+            list-style: none;
+        }
+
+        .album-list li {
+            font-size: 0.7rem;
+            padding: 0.1rem 0;
+            border-bottom: 1px solid #1f1c19;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .album-list li span {
+            color: #6b6560;
+        }
+
+        .album-list li.upcoming {
+            color: #c9a66b;
+        }
+
+        /* Links */
+        .links {
+            margin-bottom: 0.2in;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.1rem 0.2in;
+            font-size: 0.65rem;
+        }
+
+        .links-grid a {
+            color: #a39e96;
+            text-decoration: none;
+        }
+
+        /* Books */
+        .books {
+            margin-bottom: 0.15in;
+        }
+
+        .book-list {
+            font-size: 0.7rem;
+            color: #a39e96;
+        }
+
+        .book-list p {
+            margin-bottom: 0.1rem;
+        }
+
+        /* Contact footer */
+        .contact-footer {
+            background: #151311;
+            padding: 0.25in 0.5in;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            color: #c9a66b;
+            margin-bottom: 0.1rem;
+        }
+
+        .contact-email {
+            font-size: 0.9rem;
+            color: #e8e4df;
+        }
+
+        .contact-phone {
+            font-size: 0.75rem;
+            color: #a39e96;
+        }
+
+        .website {
+            text-align: right;
+        }
+
+        .website-url {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+            color: #e8e4df;
+        }
+
+        .website-label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #6b6560;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="epk">
+        <header class="header">
+            <img src="../images/thomas-live-stage.jpg" alt="Thomas Hinds performing" class="header-photo">
+            <div class="header-overlay">
+                <p class="genre-label">Americana / Folk Artist</p>
+                <h1 class="artist-name">Thomas Hinds</h1>
+                <p class="tagline">Solo Acoustic Artist & Poetic Troubadour</p>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="two-column">
+                <div class="column-main">
+                    <section class="bio">
+                        <h2 class="section-title">About</h2>
+                        <p>A hard-touring troubadour surviving on raw talent and a heartfelt folk-rock repertoire, Thomas Hinds performs full-time across the country with half a million miles under his belt over the last six years.</p>
+                        <p>A singer/songwriter out of northern Georgia, Thomas has been building a reputation for lyrical depth and an original voice. His 2023 album <em>Where Do We Go From Here</em>, recorded at Alabama's legendary FAME Studios, reached #86 on the Americana Album charts.</p>
+                        <p>His highly anticipated follow-up, <em>Hotel Room Songs</em>, drops in 2026 featuring thirteen tracks recorded at FAME Studios and West End Sound in Atlanta. First single coming late January.</p>
+                    </section>
+
+                    <section class="stats">
+                        <div class="stat">
+                            <div class="stat-number">500K</div>
+                            <div class="stat-label">Miles Toured</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">#86</div>
+                            <div class="stat-label">Americana Charts</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">SXSW</div>
+                            <div class="stat-label">2024</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">Albums</div>
+                        </div>
+                    </section>
+
+                    <section class="quotes">
+                        <h2 class="section-title">Press</h2>
+                        <blockquote class="quote">
+                            "Thomas Hinds creates a one-of-a-kind amalgamation of sounds, with organ lines that are somehow both mellow and wailing alongside flowing streams of steel string slides and fingerpicked guitars."
+                            <cite>— Little Star PR</cite>
+                        </blockquote>
+                        <blockquote class="quote">
+                            "Sounds like a cross between the ethereal crooning of Jeff Buckley and the down-to-earth angst of early Wilco."
+                            <cite>— Music Press</cite>
+                        </blockquote>
+                    </section>
+                </div>
+
+                <div class="column-side">
+                    <section class="discography">
+                        <h2 class="section-title">Discography</h2>
+                        <ul class="album-list">
+                            <li class="upcoming">Hotel Room Songs <span>2026</span></li>
+                            <li>Along The Road (Live) <span>2025</span></li>
+                            <li>Where Do We Go From Here <span>2023</span></li>
+                            <li>Heart Attacks & Sweet Dreams <span>2022</span></li>
+                            <li>Resurrection Road <span>2019</span></li>
+                            <li>Barbwire Bouquet <span>2017</span></li>
+                            <li>Ghosts and Lamentations <span>2015</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="links">
+                        <h2 class="section-title">Listen & Connect</h2>
+                        <div class="links-grid">
+                            <a href="https://open.spotify.com/artist/7wOxMZgaCVFRwfRT9tvqDH">Spotify</a>
+                            <a href="https://www.facebook.com/profile.php?id=61552916633069">Facebook</a>
+                            <a href="https://music.apple.com/us/artist/thomas-hinds/1004862632">Apple Music</a>
+                            <a href="https://instagram.com/hindsight_musings">Instagram</a>
+                            <a href="https://thomashindsmedia.bandcamp.com/">Bandcamp</a>
+                            <a href="https://www.youtube.com/user/Tbone77777">YouTube</a>
+                            <a href="https://www.tiktok.com/@hindsight_musings">TikTok</a>
+                            <a href="https://www.patreon.com/thomashindsmusic">Patreon</a>
+                        </div>
+                    </section>
+
+                    <section class="books">
+                        <h2 class="section-title">Books</h2>
+                        <div class="book-list">
+                            <p><em>Ghost of a River</em> (2022)</p>
+                            <p><em>In The Details</em> (2024)</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <footer class="contact-footer">
+            <div class="contact-info">
+                <h3>Booking</h3>
+                <div class="contact-email">thomashindsschedule@gmail.com</div>
+            </div>
+            <div class="website">
+                <div class="website-label">Website</div>
+                <div class="website-url">thomashindsmedia.com</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

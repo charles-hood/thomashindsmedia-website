@@ -94,9 +94,9 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 | Hero | Full-screen intro with streaming links, CTAs, staggered animations |
 | Music | 4-album grid with Spotify embed |
 | Tour | Date cards (placeholder), Bandsintown integration ready |
-| About | Bio, stats, portrait photo, links to book and poetry page |
+| About | Bio, stats, portrait photo, links to two books and poetry page |
 | Press/EPK | Downloadable bios (TXT), press photos (JPG), tech rider (PDF), one-sheet (HTML+PDF) |
-| Videos | YouTube channel embed |
+| Videos | Featured video + YouTube channel embed |
 | Newsletter | Email signup form (needs backend connection) |
 | Contact | Booking email, contact form, social links, house concerts mentioned |
 
@@ -108,16 +108,24 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 - Booking email: thomashindsschedule@gmail.com
 - Extended bio text (used for long bio, about section)
 
+### From Thomas (Direct - December 2025)
+- Updated bio text with 500K miles stat (instead of 70K/year)
+- New album announcement: Hotel Room Songs (2026) - 13 tracks, first single late January
+- Recording info: FAME Studios acoustic track + Miles Landrum (West End Sound) in Atlanta
+- Second book: In The Details (2024 second edition)
+- New YouTube video: https://youtu.be/wpLapaf7ElQ
+- New press photos: Google Drive folder (to be downloaded)
+
 ### From Spotify
 - Artist ID: 7wOxMZgaCVFRwfRT9tvqDH
-- Discography: Along The Road (2025), Where Do We Go From Here (2023), Heart Attacks & Sweet Dreams (2022), Resurrection Road (2019), Barbwire Bouquet (2017), Ghosts and Lamentations (2015)
+- Discography: Hotel Room Songs (2026 upcoming), Along The Road (2025), Where Do We Go From Here (2023), Heart Attacks & Sweet Dreams (2022), Resurrection Road (2019), Barbwire Bouquet (2017), Ghosts and Lamentations (2015)
 
 ### From Bandcamp (thomashindsmedia.bandcamp.com)
 - Album artwork for all releases
 
 ### From CanvasRebel Interview
 - Press photos
-- Bio details: 70K miles/year, SXSW 2024, #86 Americana charts
+- Bio details: 500K miles over 6 years, SXSW 2024, #86 Americana charts
 - YouTube channel ID: UC8-LYxz-roWjmf31PY48R4g
 
 ### From It's Psychedelic Baby Magazine Interview
@@ -138,7 +146,8 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 - **Bandcamp:** thomashindsmedia.bandcamp.com
 
 ### Book & Author Links
-- **Ghost of a River (Amazon):** a.co/d/dCn0DAR
+- **Ghost of a River (2022):** amazon.com/Ghost-River-Thomas-Hinds-ebook/dp/B0BKWLL678
+- **In The Details (2024 second edition):** amazon.com/Details-Thomas-Hinds/dp/B0DP6WMHQ3
 - **Amazon Author Page:** amazon.com/stores/author/B0BPJRKDQV
 
 ## EPK Assets
@@ -209,6 +218,8 @@ EOF
 ## Next Steps / TODO
 
 - [x] ~~Add real tour dates~~ ✓ Done (Dec 19 Round Trip Brewing)
+- [x] ~~Update bio with Thomas's December 2025 revisions~~ ✓ Done (500K miles, Hotel Room Songs, second book)
+- [ ] Download new press photos from Google Drive folder
 - [ ] Connect newsletter form to Mailchimp/ConvertKit
 - [ ] Connect contact form to Formspree or similar
 - [ ] Optimize images for web (compress)
@@ -216,6 +227,7 @@ EOF
 - [ ] Consider adding social feed (Juicer.io) - tabled for now, may add later
 - [x] ~~Create downloadable EPK assets~~ ✓ Done
 - [x] ~~Add favicon~~ ✓ Done (TH logo on dark background)
+- [ ] Integrate Bandsintown dates (Thomas adding shows soon)
 
 ## Research Sources
 
