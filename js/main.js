@@ -224,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Gallery images array
     const galleryImages = [
+        { src: 'images/gallery/honky-tonk.jpg', alt: 'Thomas Hinds honky-tonk performance' },
         { src: 'images/gallery/brick-wall-bw.jpg', alt: 'Thomas Hinds leaning against brick wall' },
         { src: 'images/gallery/th-stage.jpg', alt: 'Thomas Hinds on stage with logo' },
         { src: 'images/gallery/seated-bw.jpg', alt: 'Thomas Hinds seated with guitar' },
@@ -235,8 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { src: 'images/gallery/desert-spot.jpg', alt: 'Thomas Hinds at Desert 5 Spot' },
         { src: 'images/gallery/white-hat.jpg', alt: 'Thomas Hinds profile with white hat' },
         { src: 'images/gallery/psychedelic.jpg', alt: 'Thomas Hinds artistic portrait' },
-        { src: 'images/gallery/purple-vest.jpg', alt: 'Thomas Hinds purple stage with vest' },
-        { src: 'images/thomas-bio.jpg', alt: 'Thomas Hinds honky-tonk performance' }
+        { src: 'images/gallery/purple-vest.jpg', alt: 'Thomas Hinds purple stage with vest' }
     ];
 
     let currentIndex = 0;
