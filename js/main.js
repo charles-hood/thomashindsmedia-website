@@ -148,7 +148,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', highlightNav, { passive: true });
 
-    // Contact form - handled by Formspree, no JS override needed
+    // Contact form - handled by Formspree
+    // Show thank you message if redirected back after submission
+    if (window.location.search.includes('sent=1')) {
+        const formWrapper = document.querySelector('.contact-form-wrapper');
+        if (formWrapper) {
+            const thankYou = document.createElement('div');
+            thankYou.className = 'form-success';
+            thankYou.innerHTML = '<p>Thanks for your message! Thomas will get back to you soon.</p>';
+            formWrapper.insertBefore(thankYou, formWrapper.firstChild.nextSibling);
+            // Clean up URL
+            history.replaceState(null, '', window.location.pathname + '#contact');
+        }
+    }
 
     // Newsletter form - handled by MailerLite, no JS override needed
 

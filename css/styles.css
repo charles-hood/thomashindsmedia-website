@@ -1334,6 +1334,19 @@ p {
     min-height: 120px;
 }
 
+.form-success {
+    background-color: rgba(201, 166, 107, 0.15);
+    border: 1px solid var(--color-accent-primary);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent-primary);
+    font-size: 0.95rem;
+}
+
+.form-success p {
+    margin: 0;
+}
+
 /* ----- Footer ----- */
 .site-footer {
     background-color: var(--color-bg-medium);
