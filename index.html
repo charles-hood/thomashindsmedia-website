@@ -321,16 +321,23 @@
             <div class="newsletter-content">
                 <h2>Stay Connected</h2>
                 <p>Join the mailing list for tour updates, new music, and stories from the road.</p>
-                <form class="newsletter-form" action="#" method="POST">
+                <form class="newsletter-form ml-block-form"
+                      action="https://assets.mailerlite.com/jsonp/1989505/forms/174085627678033098/subscribe"
+                      data-code="" method="post" target="_blank">
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <input type="email" name="fields[email]" placeholder="Enter your email" autocomplete="email" required>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </div>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <input type="hidden" name="anticsrf" value="true">
                 </form>
                 <p class="newsletter-note">No spam, ever. Unsubscribe anytime.</p>
             </div>
         </div>
     </section>
+
+    <!-- MailerLite -->
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"></script>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">

@@ -121,7 +121,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 - Second book: In The Details (2024 second edition)
 - New YouTube video: https://youtu.be/wpLapaf7ElQ
 - New press photos from Google Drive folder:
-  - 80714D85 → hero-bg.jpg (moody hotel room shot)
+  - 387614A0 → hero-bg.jpg (moody hotel room shot, landscape crop)
   - IMG_1127 → thomas-about.jpg (colorful floral backdrop)
   - IMG_5309 → thomas-bio.jpg (honky-tonk live shot)
   - th 7 color-High-3264 → thomas-press-new.jpg (blue stage shot)
@@ -247,7 +247,7 @@ EOF
 - [x] ~~Create EPK PDF for Thomas~~ ✓ Done (press/epk.pdf)
 - [x] ~~Add Hotel Room Songs coming soon~~ ✓ Done (featured album position)
 - [x] ~~Update hero image~~ ✓ Done (moody hotel room shot)
-- [ ] Connect newsletter form to Mailchimp/ConvertKit
+- [x] ~~Connect newsletter form to Mailchimp/ConvertKit~~ ✓ Done (MailerLite)
 - [ ] Connect contact form to Formspree or similar
 - [ ] Optimize images for web (compress)
 - [ ] Consider adding social feed (Juicer.io) - tabled for now, may add later
