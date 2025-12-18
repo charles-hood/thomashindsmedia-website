@@ -265,7 +265,7 @@ EOF
 - [x] ~~Connect newsletter form to Mailchimp/ConvertKit~~ ✓ Done (MailerLite)
 - [x] ~~Add photo gallery~~ ✓ Done (12 images, lightbox from Press Photos section)
 - [x] ~~Add book covers to About section~~ ✓ Done (thumbnails with Amazon links)
-- [ ] Connect contact form to Formspree or similar
+- [ ] Connect contact form to Formspree (Thomas needs to: sign up at formspree.io with thomashindsschedule@gmail.com, create form, provide endpoint URL)
 - [ ] Optimize images for web (compress)
 - [ ] Consider adding social feed (Juicer.io) - tabled for now, may add later
 
