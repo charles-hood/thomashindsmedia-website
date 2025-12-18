@@ -152,11 +152,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show thank you message if redirected back after submission
     if (window.location.search.includes('sent=1')) {
         const formWrapper = document.querySelector('.contact-form-wrapper');
+        const contactForm = document.querySelector('.contact-form');
         if (formWrapper) {
             const thankYou = document.createElement('div');
             thankYou.className = 'form-success';
             thankYou.innerHTML = '<p>Thanks for your message! Thomas will get back to you soon.</p>';
             formWrapper.insertBefore(thankYou, formWrapper.firstChild.nextSibling);
+            // Clear form fields
+            if (contactForm) contactForm.reset();
             // Clean up URL
             history.replaceState(null, '', window.location.pathname + '#contact');
         }
