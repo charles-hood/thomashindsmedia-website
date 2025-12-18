@@ -225,6 +225,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Gallery images array
     const galleryImages = [
         { src: 'images/gallery/honky-tonk.jpg', alt: 'Thomas Hinds honky-tonk performance' },
+        { src: 'images/gallery/headshot-bw.jpg', alt: 'Thomas Hinds black and white headshot' },
+        { src: 'images/gallery/blue-stage.jpg', alt: 'Thomas Hinds blue stage lighting' },
         { src: 'images/gallery/brick-wall-bw.jpg', alt: 'Thomas Hinds leaning against brick wall' },
         { src: 'images/gallery/th-stage.jpg', alt: 'Thomas Hinds on stage with logo' },
         { src: 'images/gallery/seated-bw.jpg', alt: 'Thomas Hinds seated with guitar' },
