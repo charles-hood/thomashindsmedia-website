@@ -172,20 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Newsletter form handling
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const email = this.querySelector('input[type="email"]').value;
-
-            // Here you would integrate with Mailchimp, ConvertKit, etc.
-            // For now, show a message
-            alert(`Thanks for subscribing! We'll send updates to ${email}`);
-            this.reset();
-        });
-    }
+    // Newsletter form - handled by MailerLite, no JS override needed
 
     // Lazy loading for images (native + fallback)
     if ('loading' in HTMLImageElement.prototype) {
@@ -225,6 +212,78 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearEl) {
         const currentYear = new Date().getFullYear();
         yearEl.innerHTML = yearEl.innerHTML.replace('2025', currentYear);
+    }
+
+    // Gallery Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox?.querySelector('.lightbox-img');
+    const lightboxClose = lightbox?.querySelector('.lightbox-close');
+    const lightboxPrev = lightbox?.querySelector('.lightbox-prev');
+    const lightboxNext = lightbox?.querySelector('.lightbox-next');
+    const galleryTrigger = document.getElementById('gallery-trigger');
+
+    // Gallery images array
+    const galleryImages = [
+        { src: 'images/gallery/brick-wall-bw.jpg', alt: 'Thomas Hinds leaning against brick wall' },
+        { src: 'images/gallery/th-stage.jpg', alt: 'Thomas Hinds on stage with logo' },
+        { src: 'images/gallery/seated-bw.jpg', alt: 'Thomas Hinds seated with guitar' },
+        { src: 'images/gallery/purple-closeup.jpg', alt: 'Thomas Hinds purple stage lighting' },
+        { src: 'images/gallery/cowboy-bw.jpg', alt: 'Thomas Hinds black and white with cowboy hat' },
+        { src: 'images/gallery/downshift.jpg', alt: 'Thomas Hinds at Downshift Brewing' },
+        { src: 'images/gallery/singing-bw.jpg', alt: 'Thomas Hinds singing close-up' },
+        { src: 'images/gallery/christmas-moody.jpg', alt: 'Thomas Hinds moody performance' },
+        { src: 'images/gallery/desert-spot.jpg', alt: 'Thomas Hinds at Desert 5 Spot' },
+        { src: 'images/gallery/white-hat.jpg', alt: 'Thomas Hinds profile with white hat' },
+        { src: 'images/gallery/psychedelic.jpg', alt: 'Thomas Hinds artistic portrait' },
+        { src: 'images/gallery/purple-vest.jpg', alt: 'Thomas Hinds purple stage with vest' }
+    ];
+
+    let currentIndex = 0;
+
+    const openLightbox = (index) => {
+        currentIndex = index;
+        lightboxImg.src = galleryImages[index].src;
+        lightboxImg.alt = galleryImages[index].alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    const showPrev = () => {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentIndex].src;
+        lightboxImg.alt = galleryImages[currentIndex].alt;
+    };
+
+    const showNext = () => {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentIndex].src;
+        lightboxImg.alt = galleryImages[currentIndex].alt;
+    };
+
+    if (lightbox && galleryTrigger) {
+        galleryTrigger.addEventListener('click', () => openLightbox(0));
+
+        lightboxClose?.addEventListener('click', closeLightbox);
+        lightboxPrev?.addEventListener('click', showPrev);
+        lightboxNext?.addEventListener('click', showNext);
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showPrev();
+            if (e.key === 'ArrowRight') showNext();
+        });
     }
 });
 

@@ -180,6 +180,18 @@
             <div class="about-grid">
                 <div class="about-image">
                     <img src="images/thomas-about.jpg" alt="Thomas Hinds with guitar">
+                    <div class="book-cards">
+                        <a href="https://www.amazon.com/Ghost-River-Thomas-Hinds-ebook/dp/B0BKWLL678" target="_blank" rel="noopener" class="book-card">
+                            <img src="images/book-ghost-of-a-river.jpg" alt="Ghost of a River book cover">
+                            <span class="book-title">Ghost of a River</span>
+                            <span class="book-year">2022</span>
+                        </a>
+                        <a href="https://www.amazon.com/Details-Thomas-Hinds/dp/B0DP6WMHQ3" target="_blank" rel="noopener" class="book-card">
+                            <img src="images/book-in-the-details.jpg" alt="In The Details book cover">
+                            <span class="book-title">In The Details</span>
+                            <span class="book-year">2024</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="about-content">
                     <h2 class="section-title">About</h2>
@@ -189,7 +201,7 @@
 
                     <p>As 2026 unfolds, Thomas is finishing the final details on his highly anticipated follow-up album to <em>Where Do We Go From Here</em> (2023). <em>Hotel Room Songs</em> features thirteen tracks—ten full band songs plus an acoustic track leftover from the 2023 FAME sessions in Muscle Shoals, AL, and two additional songs recorded with Miles Landrum (West End Sound) in Atlanta. He'll be out on the road in support of the album throughout the southeast and up and down the east coast. First single drops late January—stay tuned.</p>
 
-                    <p>Thomas is also the author of two books of poetry and prose: <em><a href="https://www.amazon.com/Ghost-River-Thomas-Hinds-ebook/dp/B0BKWLL678" target="_blank" rel="noopener">Ghost of a River</a></em> (2022) and <em><a href="https://www.amazon.com/Details-Thomas-Hinds/dp/B0DP6WMHQ3" target="_blank" rel="noopener">In The Details</a></em> (2024). Follow his poetry and prose on <a href="https://www.facebook.com/hindsightmusings" target="_blank" rel="noopener">Hindsight Musings</a>.</p>
+                    <p>Thomas is also the author of two books of poetry and prose. Follow his writing on <a href="https://www.facebook.com/hindsightmusings" target="_blank" rel="noopener">Hindsight Musings</a>.</p>
 
                     <div class="about-stats">
                         <div class="stat">
@@ -209,6 +221,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Photo Gallery Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous">&lsaquo;</button>
+        <button class="lightbox-next" aria-label="Next">&rsaquo;</button>
+        <img src="" alt="" class="lightbox-img">
+    </div>
 
     <!-- Press/EPK Section -->
     <section id="press" class="section press-section">
@@ -234,8 +254,8 @@
                     <h3>Press Photos</h3>
                     <p>High-resolution images for print and web.</p>
                     <div class="epk-links">
-                        <a href="images/thomas-bio.jpg" download="thomas-hinds-portrait.jpg" class="btn btn-small">Portrait</a>
-                        <a href="images/thomas-press-new.jpg" download="thomas-hinds-press.jpg" class="btn btn-small btn-outline">Press Photo</a>
+                        <button id="gallery-trigger" class="btn btn-small">Browse All (12)</button>
+                        <a href="images/thomas-bio.jpg" download="thomas-hinds-portrait.jpg" class="btn btn-small btn-outline">Download Portrait</a>
                     </div>
                 </div>
 

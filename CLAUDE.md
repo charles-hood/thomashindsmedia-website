@@ -35,7 +35,7 @@ threfresh/
 ├── js/
 │   └── main.js             # Interactivity, scroll animations
 ├── images/
-│   ├── hero-bg.jpg               # Hotel room shot (Dec 2025 update)
+│   ├── hero-bg.jpg               # Hotel room shot, landscape crop (Dec 2025 update)
 │   ├── logo.png                  # From legacy site (white TH logo)
 │   ├── thomas-about.jpg          # Colorful floral backdrop (for About section)
 │   ├── thomas-bio.jpg            # Honky-tonk live shot (for Portrait download)
@@ -44,11 +44,26 @@ threfresh/
 │   ├── thomas-press-1.jpg        # Additional press photo (legacy)
 │   ├── thomas-headshot-bw.jpg    # B&W headshot
 │   ├── thomas-live-stage.jpg     # Blue stage performance shot
+│   ├── book-ghost-of-a-river.jpg # Book cover (2022)
+│   ├── book-in-the-details.jpg   # Book cover (2024)
 │   ├── album-hotel-room-songs.jpg # 2026 upcoming album art
 │   ├── album-along-the-road.jpg  # 2025 live album
 │   ├── album-where-do-we-go.jpg  # 2023 FAME Studios album
 │   ├── album-heart-attacks.jpg   # 2022 EP
-│   └── album-resurrection-road.jpg # 2019 album (removed from site, kept in repo)
+│   ├── album-resurrection-road.jpg # 2019 album (removed from site, kept in repo)
+│   └── gallery/                  # Press photo gallery (12 images)
+│       ├── brick-wall-bw.jpg
+│       ├── seated-bw.jpg
+│       ├── cowboy-bw.jpg
+│       ├── singing-bw.jpg
+│       ├── purple-closeup.jpg
+│       ├── christmas-moody.jpg
+│       ├── desert-spot.jpg
+│       ├── downshift.jpg
+│       ├── purple-vest.jpg
+│       ├── th-stage.jpg
+│       ├── white-hat.jpg
+│       └── psychedelic.jpg
 ├── press/                  # EPK downloadable assets
 │   ├── bio-short.txt       # ~100 word bio
 │   ├── bio-long.txt        # Full bio with discography, links
@@ -98,13 +113,13 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 
 | Section | Purpose |
 |---------|---------|
-| Hero | Full-screen intro with streaming links, CTAs, moody hotel room background |
+| Hero | Full-screen intro with streaming links, CTAs, moody hotel room background (landscape) |
 | Music | 4-album grid (Hotel Room Songs coming soon, plus 3 releases) with Spotify embed |
 | Tour | Bandsintown widget only (no hardcoded dates) |
-| About | Bio, stats (500K miles, #86 charts, 2 books), portrait photo, links to books and poetry page |
-| Press/EPK | Downloadable bios (TXT), press photos (JPG), one-sheet (HTML+PDF) |
+| About | Bio, stats (500K miles, #86 charts, 2 books), portrait photo, book cover thumbnails with Amazon links |
+| Press/EPK | Downloadable bios (TXT), photo gallery (12 images via lightbox), one-sheet (HTML+PDF) |
 | Videos | Featured video + YouTube channel embed |
-| Newsletter | Email signup form (needs backend connection) |
+| Newsletter | MailerLite signup form |
 | Contact | Booking email, contact form, social links, house concerts mentioned |
 
 ## Real Content Sources
@@ -248,6 +263,8 @@ EOF
 - [x] ~~Add Hotel Room Songs coming soon~~ ✓ Done (featured album position)
 - [x] ~~Update hero image~~ ✓ Done (moody hotel room shot)
 - [x] ~~Connect newsletter form to Mailchimp/ConvertKit~~ ✓ Done (MailerLite)
+- [x] ~~Add photo gallery~~ ✓ Done (12 images, lightbox from Press Photos section)
+- [x] ~~Add book covers to About section~~ ✓ Done (thumbnails with Amazon links)
 - [ ] Connect contact form to Formspree or similar
 - [ ] Optimize images for web (compress)
 - [ ] Consider adding social feed (Juicer.io) - tabled for now, may add later
