@@ -38,12 +38,11 @@ threfresh/
 │   ├── hero-bg.jpg               # Hotel room shot, landscape crop (Dec 2025 update)
 │   ├── logo.png                  # From legacy site (white TH logo)
 │   ├── thomas-about.jpg          # Colorful floral backdrop (for About section)
-│   ├── thomas-bio.jpg            # Honky-tonk live shot (for Portrait download)
-│   ├── thomas-press-new.jpg      # Blue stage shot (for Press Photo download)
+│   ├── thomas-bio.jpg            # Honky-tonk live shot (full-res for Portrait download)
 │   ├── thomas-portrait.jpg       # From CanvasRebel interview (legacy)
 │   ├── thomas-press-1.jpg        # Additional press photo (legacy)
-│   ├── thomas-headshot-bw.jpg    # B&W headshot
-│   ├── thomas-live-stage.jpg     # Blue stage performance shot
+│   ├── thomas-headshot-bw.jpg    # B&W headshot (full-res, 5.4MB)
+│   ├── thomas-live-stage.jpg     # Blue stage performance shot (full-res, 3.1MB)
 │   ├── book-ghost-of-a-river.jpg # Book cover (2022)
 │   ├── book-in-the-details.jpg   # Book cover (2024)
 │   ├── album-hotel-room-songs.jpg # 2026 upcoming album art
@@ -51,10 +50,13 @@ threfresh/
 │   ├── album-where-do-we-go.jpg  # 2023 FAME Studios album
 │   ├── album-heart-attacks.jpg   # 2022 EP
 │   ├── album-resurrection-road.jpg # 2019 album (removed from site, kept in repo)
-│   └── gallery/                  # Press photo gallery (12 images)
+│   └── gallery/                  # Press photo gallery (15 images, compressed for web)
+│       ├── honky-tonk.jpg        # Primary portrait (first in lightbox)
+│       ├── headshot-bw.jpg       # B&W headshot (compressed from 5.4MB → 434KB)
+│       ├── blue-stage.jpg        # Blue stage shot (compressed from 3.1MB → 670KB)
 │       ├── brick-wall-bw.jpg
-│       ├── seated-bw.jpg
 │       ├── cowboy-bw.jpg
+│       ├── seated-bw.jpg
 │       ├── singing-bw.jpg
 │       ├── purple-closeup.jpg
 │       ├── christmas-moody.jpg
@@ -117,7 +119,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 | Music | 4-album grid (Hotel Room Songs coming soon, plus 3 releases) with Spotify embed |
 | Tour | Bandsintown widget only (no hardcoded dates) |
 | About | Bio, stats (500K miles, #86 charts, 2 books), portrait photo, book cover thumbnails with Amazon links |
-| Press/EPK | Downloadable bios (TXT), photo gallery (12 images via lightbox), one-sheet (HTML+PDF) |
+| Press/EPK | Downloadable bios (TXT), photo gallery (15 images via lightbox), EPK/one-sheet (HTML+PDF) |
 | Videos | Featured video + YouTube channel embed |
 | Newsletter | MailerLite signup form |
 | Contact | Booking email, contact form, social links, house concerts mentioned |
@@ -139,9 +141,9 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
   - 387614A0 → hero-bg.jpg (moody hotel room shot, landscape crop)
   - IMG_1127 → thomas-about.jpg (colorful floral backdrop)
   - IMG_5309 → thomas-bio.jpg (honky-tonk live shot)
-  - th 7 color-High-3264 → thomas-press-new.jpg (blue stage shot)
   - phonto 31 → album-hotel-room-songs.jpg (album art)
   - DSC09301_b&w → thomas-headshot-bw.jpg (B&W headshot)
+  - th 7 color-High-3264 → thomas-live-stage.jpg (blue stage shot)
 - Technical rider removed from site (per Thomas's request)
 - Bookings go directly through Thomas (not through manager)
 
@@ -192,11 +194,12 @@ Created downloadable Electronic Press Kit materials:
 |-------|--------|-------|
 | Short Bio | TXT | ~100 words, contact info |
 | Long Bio | TXT | Full bio, discography, all links, booking info |
-| EPK | HTML + PDF | Full one-page EPK for Thomas to send to venues (press/epk.pdf) |
-| One Sheet | HTML + PDF | Photo, bio, quotes, stats, streaming links, contact |
-| Press Photos | JPG | Portrait (thomas-bio.jpg) and Press Photo (thomas-press-new.jpg) |
+| EPK | HTML + PDF | Full one-page EPK with cowboy-bw.jpg photo (press/epk.html, press/epk.pdf) |
+| Press Photos | JPG | Portrait download (thomas-bio.jpg full-res), gallery (15 compressed images) |
 
-**Note on formats:** Bios kept as TXT for easy copy/paste. EPK and one-sheet as PDF for professional appearance.
+**Note on formats:** Bios kept as TXT for easy copy/paste. EPK as PDF for professional appearance. Website "One Sheet" links point to EPK files.
+
+**Note on one-sheet.html/pdf:** Legacy files still in repo but not linked from website. EPK serves same purpose with better photo.
 
 **Technical Rider:** Removed from website per Thomas's request (files still exist in repo but not linked).
 
@@ -263,10 +266,10 @@ EOF
 - [x] ~~Add Hotel Room Songs coming soon~~ ✓ Done (featured album position)
 - [x] ~~Update hero image~~ ✓ Done (moody hotel room shot)
 - [x] ~~Connect newsletter form to Mailchimp/ConvertKit~~ ✓ Done (MailerLite)
-- [x] ~~Add photo gallery~~ ✓ Done (12 images, lightbox from Press Photos section)
+- [x] ~~Add photo gallery~~ ✓ Done (15 images, lightbox from Press Photos section)
 - [x] ~~Add book covers to About section~~ ✓ Done (thumbnails with Amazon links)
 - [ ] Connect contact form to Formspree (Thomas needs to: sign up at formspree.io with thomashindsschedule@gmail.com, create form, provide endpoint URL)
-- [ ] Optimize images for web (compress)
+- [x] ~~Optimize images for web (compress)~~ ✓ Done (gallery images compressed, full-res kept for downloads)
 - [ ] Consider adding social feed (Juicer.io) - tabled for now, may add later
 
 ## Research Sources
@@ -280,4 +283,4 @@ EOF
 
 ---
 
-*Last updated: December 17, 2025*
+*Last updated: December 18, 2025*
