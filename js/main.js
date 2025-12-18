@@ -148,29 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', highlightNav, { passive: true });
 
-    // Contact form handling (basic client-side)
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-
-            // Here you would typically send to a backend or service
-            // For now, construct mailto link as fallback
-            const subject = encodeURIComponent(`[${data.subject}] Contact from ${data.name}`);
-            const body = encodeURIComponent(
-                `Name: ${data.name}\nEmail: ${data.email}\nSubject: ${data.subject}\n\nMessage:\n${data.message}`
-            );
-
-            window.location.href = `mailto:thomashindsschedule@gmail.com?subject=${subject}&body=${body}`;
-
-            // Optional: Show success message
-            // alert('Redirecting to email client...');
-        });
-    }
+    // Contact form - handled by Formspree, no JS override needed
 
     // Newsletter form - handled by MailerLite, no JS override needed
 
