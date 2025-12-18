@@ -116,7 +116,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 
 ### From Thomas (Direct - December 2025)
 - Updated bio text with 500K miles stat (instead of 70K/year)
-- New album announcement: Hotel Room Songs (2026) - 13 tracks, first single late January
+- New album announcement: Hotel Room Songs (2026) - 13 tracks, first single Jan 27
 - Recording info: FAME Studios acoustic track + Miles Landrum (West End Sound) in Atlanta
 - Second book: In The Details (2024 second edition)
 - New YouTube video: https://youtu.be/wpLapaf7ElQ
