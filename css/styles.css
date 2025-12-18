@@ -856,7 +856,7 @@ p {
 }
 
 .bandsintown-widget {
-    margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-sm);
 }
 
 /* ----- About Section ----- */
