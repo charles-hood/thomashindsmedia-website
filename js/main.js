@@ -297,6 +297,38 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'ArrowRight') showNext();
         });
     }
+
+    // Newsletter Form Handler (MailerLite)
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterEmail = document.getElementById('newsletter-email');
+    const newsletterSuccess = document.getElementById('newsletter-success');
+    const newsletterNote = document.querySelector('.newsletter-note');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const email = newsletterEmail.value;
+            const url = `https://assets.mailerlite.com/jsonp/1989505/forms/174085627678033098/subscribe?fields[email]=${encodeURIComponent(email)}&ml-submit=1&anticsrf=true&callback=mlCallback`;
+
+            // JSONP callback
+            window.mlCallback = function(response) {
+                if (response.success) {
+                    newsletterForm.style.display = 'none';
+                    if (newsletterNote) newsletterNote.style.display = 'none';
+                    newsletterSuccess.style.display = 'block';
+                }
+                // Clean up
+                delete window.mlCallback;
+            };
+
+            // Create script tag for JSONP request
+            const script = document.createElement('script');
+            script.src = url;
+            document.body.appendChild(script);
+            script.onload = () => script.remove();
+        });
+    }
 });
 
 // Prevent body scroll when mobile nav is open
