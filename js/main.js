@@ -3,6 +3,22 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Announcement Banner Dismiss
+    const announcementBanner = document.querySelector('.announcement-banner');
+    const announcementClose = document.querySelector('.announcement-close');
+
+    if (announcementBanner && announcementClose) {
+        // Check if already dismissed this session
+        if (sessionStorage.getItem('announcementDismissed')) {
+            announcementBanner.classList.add('hidden');
+        }
+
+        announcementClose.addEventListener('click', () => {
+            announcementBanner.classList.add('hidden');
+            sessionStorage.setItem('announcementDismissed', 'true');
+        });
+    }
+
     // Mobile Navigation Toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
