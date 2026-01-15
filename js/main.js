@@ -303,6 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const newsletterEmail = document.getElementById('newsletter-email');
     const newsletterSuccess = document.getElementById('newsletter-success');
     const newsletterNote = document.querySelector('.newsletter-note');
+    const submitBtn = newsletterForm ? newsletterForm.querySelector('button[type="submit"]') : null;
 
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', (e) => {
@@ -311,12 +312,37 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = newsletterEmail.value;
             const url = `https://assets.mailerlite.com/jsonp/1989505/forms/174085627678033098/subscribe?fields[email]=${encodeURIComponent(email)}&ml-submit=1&anticsrf=true&callback=mlCallback`;
 
+            // Show loading state
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Subscribing...';
+            }
+
+            // Timeout fallback - if callback not called in 10s, show success anyway
+            // (MailerLite JSONP sometimes doesn't call callback on success)
+            const timeout = setTimeout(() => {
+                if (window.mlCallback) {
+                    newsletterForm.style.display = 'none';
+                    if (newsletterNote) newsletterNote.style.display = 'none';
+                    newsletterSuccess.style.display = 'block';
+                    delete window.mlCallback;
+                }
+            }, 10000);
+
             // JSONP callback
             window.mlCallback = function(response) {
+                clearTimeout(timeout);
                 if (response.success) {
                     newsletterForm.style.display = 'none';
                     if (newsletterNote) newsletterNote.style.display = 'none';
                     newsletterSuccess.style.display = 'block';
+                } else {
+                    // Show error
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Subscribe';
+                    }
+                    alert('There was an error subscribing. Please try again.');
                 }
                 // Clean up
                 delete window.mlCallback;
@@ -325,6 +351,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Create script tag for JSONP request
             const script = document.createElement('script');
             script.src = url;
+            script.onerror = () => {
+                clearTimeout(timeout);
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Subscribe';
+                }
+                alert('There was an error connecting. Please try again.');
+                delete window.mlCallback;
+            };
             document.body.appendChild(script);
             script.onload = () => script.remove();
         });
