@@ -8,6 +8,7 @@ This is a complete redesign of thomashindsmedia.com for Thomas Hinds, a solo aco
 **Hero subtitle:** "Songs of life, love & finding oneself" (from his legacy bio)
 
 **Repository:** https://github.com/charles-hood/thomashindsmedia-website
+**Live site:** https://thomashindsmedia.com
 
 ## Goals
 
@@ -115,14 +116,15 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 
 | Section | Purpose |
 |---------|---------|
+| Announcement Banner | Dismissable presave banner for "Trouble With Sin" single (Jan 27, 2026) with Spotify/Apple links |
 | Hero | Full-screen intro with streaming links, CTAs, moody hotel room background (landscape) |
 | Music | 4-album grid (Hotel Room Songs coming soon, plus 3 releases) with Spotify embed |
 | Tour | Bandsintown widget only (no hardcoded dates) |
 | About | Bio, stats (500K miles, #86 charts, 2 books), portrait photo, book cover thumbnails with Amazon links |
 | Press/EPK | Downloadable bios (TXT), photo gallery (15 images via lightbox), EPK/one-sheet (HTML+PDF) |
 | Videos | Featured video + YouTube channel embed |
-| Newsletter | MailerLite signup form |
-| Contact | Booking email, contact form, social links, house concerts mentioned |
+| Newsletter | MailerLite signup with custom JSONP handler, inline success message |
+| Contact | Booking email, contact form (Formsubmit.co), social links, house concerts mentioned |
 
 ## Real Content Sources
 
@@ -131,9 +133,13 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 - Booking email: thomashindsschedule@gmail.com
 - Extended bio text (used for long bio, about section)
 
-### From Thomas (Direct - December 2025)
+### From Thomas (Direct - December 2025 / January 2026)
 - Updated bio text with 500K miles stat (instead of 70K/year)
 - New album announcement: Hotel Room Songs (2026) - 13 tracks, first single Jan 27
+- First single: "Trouble With Sin" (releasing Jan 27, 2026)
+- Presave links (via FoundMusicFM):
+  - Spotify: https://ffm.to/b029vnj.OIS/spotify
+  - Apple Music: https://ffm.to/b029vnj/apple
 - Recording info: FAME Studios acoustic track + Miles Landrum (West End Sound) in Atlanta
 - Second book: In The Details (2024 second edition)
 - New YouTube video: https://youtu.be/wpLapaf7ElQ
@@ -268,8 +274,11 @@ EOF
 - [x] ~~Connect newsletter form to Mailchimp/ConvertKit~~ ✓ Done (MailerLite)
 - [x] ~~Add photo gallery~~ ✓ Done (15 images, lightbox from Press Photos section)
 - [x] ~~Add book covers to About section~~ ✓ Done (thumbnails with Amazon links)
-- [x] ~~Connect contact form~~ ✓ Done (Formsubmit.co - thomashindsschedule@gmail.com; redirect set to staging URL, change to production when live)
+- [x] ~~Connect contact form~~ ✓ Done (Formsubmit.co - thomashindsschedule@gmail.com, redirects to production URL)
 - [x] ~~Optimize images for web (compress)~~ ✓ Done (gallery images compressed, full-res kept for downloads)
+- [x] ~~Add presave announcement banner~~ ✓ Done (Jan 2026 - "Trouble With Sin" single, Spotify/Apple links, dismissable)
+- [x] ~~Fix newsletter form redirect~~ ✓ Done (custom JSONP handler with inline success message)
+- [ ] Remove announcement banner after single release (after Jan 27, 2026)
 - [ ] Consider adding social feed (Juicer.io) - tabled for now, may add later
 
 ## Research Sources
@@ -283,4 +292,4 @@ EOF
 
 ---
 
-*Last updated: December 18, 2025*
+*Last updated: January 15, 2026*
