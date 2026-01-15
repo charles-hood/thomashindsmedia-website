@@ -123,7 +123,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 | About | Bio, stats (500K miles, #86 charts, 2 books), portrait photo, book cover thumbnails with Amazon links |
 | Press/EPK | Downloadable bios (TXT), photo gallery (15 images via lightbox), EPK/one-sheet (HTML+PDF) |
 | Videos | Featured video + YouTube channel embed |
-| Newsletter | MailerLite signup with custom JSONP handler, inline success message |
+| Newsletter | MailerLite signup with custom JSONP handler, inline success message, loading state, error handling |
 | Contact | Booking email, contact form (Formsubmit.co), social links, house concerts mentioned |
 
 ## Real Content Sources
@@ -277,7 +277,7 @@ EOF
 - [x] ~~Connect contact form~~ ✓ Done (Formsubmit.co - thomashindsschedule@gmail.com, redirects to production URL)
 - [x] ~~Optimize images for web (compress)~~ ✓ Done (gallery images compressed, full-res kept for downloads)
 - [x] ~~Add presave announcement banner~~ ✓ Done (Jan 2026 - "Trouble With Sin" single, Spotify/Apple links, dismissable)
-- [x] ~~Fix newsletter form redirect~~ ✓ Done (custom JSONP handler with inline success message)
+- [x] ~~Fix newsletter form~~ ✓ Done (custom JSONP handler with inline success message, loading state, error handling; confirmation emails may go to spam)
 - [ ] Remove announcement banner after single release (after Jan 27, 2026)
 - [ ] Consider adding social feed (Juicer.io) - tabled for now, may add later
 
