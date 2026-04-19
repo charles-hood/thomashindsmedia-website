@@ -118,7 +118,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 |---------|---------|
 | Announcement Banner | Dismissable "out now" banner for "Heart On A Line" single (released Apr 14, 2026) with direct Spotify/Apple links |
 | Hero | Full-screen intro with streaming links, CTAs, moody hotel room background (landscape) |
-| Music | 4-album grid (Hotel Room Songs coming soon, plus 3 releases) with Spotify embed |
+| Music | 4-album grid (Hotel Room Songs card with "Album Coming 2026" badge + 2 released singles, plus 3 past releases) with Spotify embed |
 | Tour | Bandsintown widget only (no hardcoded dates) |
 | About | Bio, stats (500K miles, #86 charts, 2 books), portrait photo, book cover thumbnails with Amazon links |
 | Press/EPK | Downloadable bios (TXT), photo gallery (15 images via lightbox), EPK/one-sheet (HTML+PDF) |
@@ -135,7 +135,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 
 ### From Thomas (Direct - December 2025 / January 2026)
 - Updated bio text with 500K miles stat (instead of 70K/year)
-- New album announcement: Hotel Room Songs (2026) - 13 tracks, first single Jan 27
+- New album announcement: Hotel Room Songs (2026) - 13 tracks; first single "Trouble With Sin" (Jan 27, 2026), second single "Heart On A Line" (Apr 14, 2026)
 - Singles from Hotel Room Songs (both listed in Music section on Hotel Room Songs card):
   - "Heart On A Line" (released April 14, 2026)
     - Spotify: https://open.spotify.com/track/4ECImlalRauy5v2hzqWezP
@@ -297,4 +297,4 @@ EOF
 
 ---
 
-*Last updated: January 15, 2026*
+*Last updated: April 18, 2026*
