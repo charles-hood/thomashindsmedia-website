@@ -808,6 +808,52 @@ p {
     transform: translateY(-2px);
 }
 
+.album-singles {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.album-singles li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--color-accent-dim);
+}
+
+.album-singles li:first-child {
+    border-top: none;
+    padding-top: 0.125rem;
+}
+
+.single-title {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--color-text-primary);
+}
+
+.single-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.single-links a {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.single-links a:hover {
+    color: var(--color-accent-primary);
+    transform: translateY(-2px);
+}
+
 .spotify-embed {
     max-width: 800px;
     margin: 0 auto;

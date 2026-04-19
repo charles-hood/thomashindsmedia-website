@@ -116,7 +116,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 
 | Section | Purpose |
 |---------|---------|
-| Announcement Banner | Dismissable presave banner for "Trouble With Sin" single (Jan 27, 2026) with Spotify/Apple links |
+| Announcement Banner | Dismissable "out now" banner for "Heart On A Line" single (released Apr 14, 2026) with direct Spotify/Apple links |
 | Hero | Full-screen intro with streaming links, CTAs, moody hotel room background (landscape) |
 | Music | 4-album grid (Hotel Room Songs coming soon, plus 3 releases) with Spotify embed |
 | Tour | Bandsintown widget only (no hardcoded dates) |
@@ -136,10 +136,15 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 ### From Thomas (Direct - December 2025 / January 2026)
 - Updated bio text with 500K miles stat (instead of 70K/year)
 - New album announcement: Hotel Room Songs (2026) - 13 tracks, first single Jan 27
-- First single: "Trouble With Sin" (releasing Jan 27, 2026)
-- Presave links (via FoundMusicFM):
-  - Spotify: https://ffm.to/b029vnj.OIS/spotify
-  - Apple Music: https://ffm.to/b029vnj/apple
+- Singles from Hotel Room Songs (both listed in Music section on Hotel Room Songs card):
+  - "Heart On A Line" (released April 14, 2026)
+    - Spotify: https://open.spotify.com/track/4ECImlalRauy5v2hzqWezP
+    - Apple Music: https://music.apple.com/us/album/heart-on-a-line/1892135413?i=1892135414
+    - FoundMusicFM smart link: https://ffm.to/abo39oe
+  - "Trouble With Sin" (released Jan 27, 2026)
+    - Spotify: https://open.spotify.com/track/2SMmNlUX6BQuPsk81T1rTr
+    - Apple Music: https://music.apple.com/us/album/trouble-with-sin/1871178437?i=1871178438
+    - Prior FoundMusicFM presave: https://ffm.to/b029vnj.OIS/spotify, https://ffm.to/b029vnj/apple
 - Recording info: FAME Studios acoustic track + Miles Landrum (West End Sound) in Atlanta
 - Second book: In The Details (2024 second edition)
 - New YouTube video: https://youtu.be/wpLapaf7ElQ
@@ -276,9 +281,9 @@ EOF
 - [x] ~~Add book covers to About section~~ ✓ Done (thumbnails with Amazon links)
 - [x] ~~Connect contact form~~ ✓ Done (Formsubmit.co - thomashindsschedule@gmail.com, redirects to production URL)
 - [x] ~~Optimize images for web (compress)~~ ✓ Done (gallery images compressed, full-res kept for downloads)
-- [x] ~~Add presave announcement banner~~ ✓ Done (Jan 2026 - "Trouble With Sin" single, Spotify/Apple links, dismissable)
+- [x] ~~Add presave announcement banner~~ ✓ Done (Jan 2026 - "Trouble With Sin" pre-save; updated April 2026 to "Heart On A Line" out-now banner with direct Spotify/Apple links)
 - [x] ~~Fix newsletter form~~ ✓ Done (custom JSONP handler with inline success message, loading state, error handling; confirmation emails may go to spam)
-- [ ] Remove announcement banner after single release (after Jan 27, 2026)
+- [ ] Remove/update announcement banner when next single drops
 - [ ] Consider adding social feed (Juicer.io) - tabled for now, may add later
 
 ## Research Sources
