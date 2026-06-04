@@ -2044,29 +2044,28 @@ p {
 
 @media (min-width: 900px) {
     .campaign-grid {
-        grid-template-columns: 1.1fr 0.9fr;
+        grid-template-columns: 0.9fr 1.1fr;
         gap: var(--spacing-xl);
     }
 }
 
 .campaign-media {
     position: relative;
+    max-width: 440px;
 }
 
-.campaign-video {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    background-color: var(--color-bg-light);
-    box-shadow: var(--shadow-lg);
-}
-
-.campaign-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+.campaign-media img {
+    display: block;
     width: 100%;
-    height: 100%;
+    border-radius: 0;
+    box-shadow: var(--shadow-lg);
+    filter: saturate(0.95);
+    transition: filter var(--transition-slow), transform var(--transition-medium);
+}
+
+.campaign-media a:hover img {
+    filter: saturate(1.05);
+    transform: scale(1.01);
 }
 
 /* Editorial offset frame, accent-colored to signal the CTA */
@@ -2132,6 +2131,32 @@ p {
 
 .campaign-cta {
     margin-top: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.campaign-video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.campaign-video-link i {
+    font-size: 0.7rem;
+    color: var(--color-accent-primary);
+}
+
+.campaign-video-link:hover {
+    color: var(--color-text-primary);
 }
 
 @media (max-width: 600px) {

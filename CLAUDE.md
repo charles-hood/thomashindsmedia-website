@@ -120,7 +120,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 | Announcement Banner | Dismissable "out now" banner for "In My Head" single (released May 26, 2026) with direct Spotify/Apple links |
 | Hero | Full-screen intro with streaming links, CTAs, moody hotel room background (landscape) |
 | Music | 4-album grid (Hotel Room Songs card with "Album Coming 2026" badge + 4 released singles: In My Head, Heart On A Line, Old Flames, Trouble With Sin, plus 3 past releases) with Spotify embed |
-| Campaign | "Help Make the Record" support section — Plaid Dog Recording crowdfunding for his first professionally-produced studio album (producer Ryan Gallagher, Boston; separate project from Hotel Room Songs); embedded YouTube pitch video + "Back the Campaign" CTA. Also linked as "Support" in nav |
+| Campaign | "Help Make the Record" support section — Plaid Dog Recording crowdfunding for his first professionally-produced studio album (producer Ryan Gallagher, Boston; separate project from Hotel Room Songs). Trail of Dead Roses cover art (links to funding page) + bold "Back the Campaign" CTA, with the pitch video demoted to a small "Watch the campaign video" secondary link (opens YouTube in new tab) so it doesn't compete with the funding click. Also linked as "Support" in nav |
 | Tour | Bandsintown widget only (no hardcoded dates) |
 | About | Bio, stats (500K miles, #86 charts, 2 books), portrait photo, book cover thumbnails with Amazon links |
 | Press/EPK | Downloadable bios (TXT), photo gallery (15 images via lightbox), EPK/one-sheet (HTML+PDF) |
@@ -139,7 +139,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 - Crowdfunding campaign for his first professionally-produced studio album (producer Ryan Gallagher, Boston): https://funding.plaiddogrecording.com/thomas-hinds
   - This is a SEPARATE, brand-new project — distinct from "Hotel Room Songs" (his self-produced 2026 album). The campaign page frames it as his "first ever, professionally produced studio album."
   - Pitch video: https://youtu.be/1O9HuSSnFWg (embedded in the Campaign section)
-  - First recorded song: "Trail of Dead Roses" (free listen on campaign page; campaign art saved as images/album-trail-of-dead-roses.jpg, kept in repo but no longer displayed on site)
+  - First recorded song: "Trail of Dead Roses" (free listen on campaign page; campaign art saved as images/album-trail-of-dead-roses.jpg, displayed as the section's media anchor linking to the funding page)
   - Added as a dedicated "Campaign" section + "Support" nav link
   - Goal $7,500; campaign page shows live funding/days-left — site intentionally does NOT hardcode these (they go stale)
   - Note: the pitch video calls it an "EP" but the written campaign page repeatedly says "album"; site copy follows the page ("studio album")
