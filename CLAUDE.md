@@ -50,6 +50,7 @@ threfresh/
 │   ├── album-along-the-road.jpg  # 2025 live album
 │   ├── album-where-do-we-go.jpg  # 2023 FAME Studios album
 │   ├── album-heart-attacks.jpg   # 2022 EP
+│   ├── album-trail-of-dead-roses.jpg # "Trail of Dead Roses" single / Plaid Dog campaign art (2026)
 │   ├── album-resurrection-road.jpg # 2019 album (removed from site, kept in repo)
 │   └── gallery/                  # Press photo gallery (15 images, compressed for web)
 │       ├── honky-tonk.jpg        # Primary portrait (first in lightbox)
@@ -116,9 +117,10 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 
 | Section | Purpose |
 |---------|---------|
-| Announcement Banner | Dismissable "out now" banner for "Heart On A Line" single (released Apr 14, 2026) with direct Spotify/Apple links |
+| Announcement Banner | Dismissable "out now" banner for "In My Head" single (released May 26, 2026) with direct Spotify/Apple links |
 | Hero | Full-screen intro with streaming links, CTAs, moody hotel room background (landscape) |
-| Music | 4-album grid (Hotel Room Songs card with "Album Coming 2026" badge + 2 released singles, plus 3 past releases) with Spotify embed |
+| Music | 4-album grid (Hotel Room Songs card with "Album Coming 2026" badge + 4 released singles: In My Head, Heart On A Line, Old Flames, Trouble With Sin, plus 3 past releases) with Spotify embed |
+| Campaign | "Help Make the Record" support section — Plaid Dog Recording crowdfunding for his first professionally-produced studio album (producer Ryan Gallagher, Boston; separate project from Hotel Room Songs); embedded YouTube pitch video + "Back the Campaign" CTA. Also linked as "Support" in nav |
 | Tour | Bandsintown widget only (no hardcoded dates) |
 | About | Bio, stats (500K miles, #86 charts, 2 books), portrait photo, book cover thumbnails with Amazon links |
 | Press/EPK | Downloadable bios (TXT), photo gallery (15 images via lightbox), EPK/one-sheet (HTML+PDF) |
@@ -132,6 +134,21 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 - White logo PNG
 - Booking email: thomashindsschedule@gmail.com
 - Extended bio text (used for long bio, about section)
+
+### From Thomas (Direct - June 2026)
+- Crowdfunding campaign for his first professionally-produced studio album (producer Ryan Gallagher, Boston): https://funding.plaiddogrecording.com/thomas-hinds
+  - This is a SEPARATE, brand-new project — distinct from "Hotel Room Songs" (his self-produced 2026 album). The campaign page frames it as his "first ever, professionally produced studio album."
+  - Pitch video: https://youtu.be/1O9HuSSnFWg (embedded in the Campaign section)
+  - First recorded song: "Trail of Dead Roses" (free listen on campaign page; campaign art saved as images/album-trail-of-dead-roses.jpg, kept in repo but no longer displayed on site)
+  - Added as a dedicated "Campaign" section + "Support" nav link
+  - Goal $7,500; campaign page shows live funding/days-left — site intentionally does NOT hardcode these (they go stale)
+  - Note: the pitch video calls it an "EP" but the written campaign page repeatedly says "album"; site copy follows the page ("studio album")
+- Latest single "In My Head" (released May 26, 2026) — confirmed by Thomas as the 4th single from "Hotel Room Songs"
+  - Spotify: https://open.spotify.com/track/7M8tuKUTH0Q5fWMOvt55bx
+  - Apple Music: https://music.apple.com/us/album/in-my-head/6773778008?i=6773778009
+  - Featured in announcement banner; added to the Hotel Room Songs singles list
+- All four Hotel Room Songs singles now listed (newest first): "In My Head", "Heart On A Line", "Old Flames", "Trouble With Sin"
+  - "Old Flames" (2026) — Spotify: https://open.spotify.com/track/1HLXobkTTk1Bo8fLAPd2ss · Apple: https://music.apple.com/us/album/old-flames/1879762582?i=1879762583
 
 ### From Thomas (Direct - December 2025 / January 2026)
 - Updated bio text with 500K miles stat (instead of 70K/year)
@@ -297,4 +314,4 @@ EOF
 
 ---
 
-*Last updated: April 18, 2026*
+*Last updated: June 4, 2026*
