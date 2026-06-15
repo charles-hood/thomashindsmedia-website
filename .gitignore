@@ -1,6 +1,9 @@
 # Python virtual environment
 .venv/
 
+# Node dependencies (e.g. Playwright, used only for local diagnostics)
+node_modules/
+
 # Claude Code
 .claude/
 
