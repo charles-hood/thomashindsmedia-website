@@ -193,10 +193,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (bitWidget && tourFallback) {
         const widgetRendered = () => {
-            // BIT injects an iframe or bit-* nodes, and/or visible text (including
-            // its own "no upcoming shows" message). Any of those counts as working.
+            // A working widget shows an iframe or actual text — real event rows,
+            // or BIT's own "no upcoming shows" message. NOTE: BIT injects empty
+            // scaffolding (<div class="bit-container"></div>) even when its API
+            // errors out, so the mere presence of bit-* nodes is NOT proof of
+            // success — require an iframe or visible text content.
             if (bitWidget.querySelector('iframe')) return true;
-            if (bitWidget.querySelector('[class*="bit-"]:not(.bit-widget-initializer)')) return true;
             return (bitWidget.textContent || '').trim().length > 0;
         };
 
