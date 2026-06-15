@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tour widget test (unlisted)</title>
+<style>
+  :root {
+    --bg-dark: #0a0908;
+    --bg-med: #151311;
+    --text: #e8e4df;
+    --text-dim: #a39e96;
+    --accent: #c9a66b;
+    --border: #3d3426;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg-dark);
+    color: var(--text);
+    font-family: 'Libre Franklin', Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    padding: 40px 20px 80px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 28px; letter-spacing: 1px; margin: 0 0 4px; }
+  .sub { color: var(--text-dim); margin: 0 0 28px; font-size: 14px; }
+  .note {
+    background: var(--bg-med);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 36px;
+  }
+  .note strong { color: var(--accent); }
+  .variant { margin-bottom: 56px; }
+  .variant h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 6px;
+  }
+  .variant p { font-size: 13px; color: var(--text-dim); margin: 0 0 18px; }
+  .stage {
+    min-height: 80px;
+    padding: 8px 0;
+  }
+  /* Light variant needs a light stage so its white-on-white text is visible */
+  .stage-light {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  footer { color: var(--text-dim); font-size: 12px; text-align: center; margin-top: 40px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Tour widget test</h1>
+    <p class="sub">Unlisted comparison page. Not linked from the site.</p>
+
+    <div class="note">
+      <strong>Heads up:</strong> this hits the exact same Bandsintown API as the live site. If their server is still returning the error I found, BOTH widgets below will render blank too. That is expected and tells us their API has not recovered yet. Once it does, this page shows how each style renders.
+    </div>
+
+    <div class="variant">
+      <h2>Variant A &middot; New method, dark theme (recommended)</h2>
+      <p>Richer attributes (all dates, details, start times, ticket buttons) styled to match the site's dark palette.</p>
+      <div class="stage">
+        <a class="bit-widget-initializer"
+           data-artist-name="id_7267344"
+           data-display-local-dates="true"
+           data-local-dates-position="tab"
+           data-display-past-dates="false"
+           data-display-details="true"
+           data-display-lineup="false"
+           data-display-start-time="true"
+           data-social-share-icon="true"
+           data-display-limit="all"
+           data-date-format="MMM. D, YYYY"
+           data-date-orientation="horizontal"
+           data-auto-style="false"
+           data-background-color="rgba(21,19,17,0)"
+           data-separator-color="rgba(61,52,38,0.7)"
+           data-text-color="rgba(232,228,223,1)"
+           data-link-color="rgba(201,166,107,1)"
+           data-link-text-color="rgba(10,9,8,1)"
+           data-font="Helvetica"
+           data-event-ticket-text="TICKETS"
+           data-event-rsvp-text="REMIND ME"
+           data-bit-logo-position="bottomRight"
+           data-display-play-my-city="false">
+        </a>
+      </div>
+    </div>
+
+    <div class="variant">
+      <h2>Variant B &middot; ChatGPT's version, exactly as given (light theme)</h2>
+      <p>The snippet pasted verbatim. It's light-themed, so it's shown on a white panel here so you can actually see it. On the real (dark) site this white styling would look out of place.</p>
+      <div class="stage stage-light">
+        <a class="bit-widget-initializer"
+           data-artist-name="id_7267344"
+           data-display-local-dates="true"
+           data-local-dates-position="tab"
+           data-display-past-dates="false"
+           data-display-details="true"
+           data-display-lineup="false"
+           data-display-start-time="true"
+           data-social-share-icon="true"
+           data-display-limit="all"
+           data-date-format="MMM. D, YYYY"
+           data-date-orientation="horizontal"
+           data-background-color="rgba(255,255,255,1)"
+           data-separator-color="rgba(221,221,221,1)"
+           data-text-color="rgba(66,66,66,1)"
+           data-font="Helvetica"
+           data-auto-style="true"
+           data-event-ticket-text="TICKETS"
+           data-event-rsvp-text="REMIND ME"
+           data-bit-logo-position="bottomRight"
+           data-display-play-my-city="true">
+        </a>
+      </div>
+    </div>
+
+    <footer>thomashindsmedia.com &middot; internal test page</footer>
+  </div>
+
+  <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+</body>
+</html>
