@@ -1010,6 +1010,47 @@ p {
     margin-top: 0;
 }
 
+/* Shown by JS only if the Bandsintown widget fails to render */
+.tour-fallback {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+}
+
+.tour-fallback p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.tour-fallback-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tour-helper {
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    margin-top: var(--spacing-md);
+}
+
+.tour-helper a {
+    color: var(--color-accent-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.tour-helper a:hover {
+    color: var(--color-accent-hover);
+}
+
+[hidden] {
+    display: none !important;
+}
+
 /* ----- About Section ----- */
 .about-section {
     background-color: var(--color-bg-medium);

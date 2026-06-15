@@ -181,6 +181,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Bandsintown widget fallback
+    // The third-party script (loaded at the bottom of the page) replaces the
+    // .bit-widget-initializer anchor with rendered content. If it's blocked,
+    // offline, or errors out, the container stays empty — in that case show a
+    // graceful fallback routing visitors to the mailing list / booking instead
+    // of a blank "Tour Dates" section.
+    const bitWidget = document.getElementById('bandsintown-widget');
+    const tourFallback = document.getElementById('tour-fallback');
+    const tourHelper = document.querySelector('.tour-helper');
+
+    if (bitWidget && tourFallback) {
+        const widgetRendered = () => {
+            // BIT injects an iframe or bit-* nodes, and/or visible text (including
+            // its own "no upcoming shows" message). Any of those counts as working.
+            if (bitWidget.querySelector('iframe')) return true;
+            if (bitWidget.querySelector('[class*="bit-"]:not(.bit-widget-initializer)')) return true;
+            return (bitWidget.textContent || '').trim().length > 0;
+        };
+
+        // Give the third-party script time to load and render before deciding.
+        window.setTimeout(() => {
+            if (!widgetRendered()) {
+                tourFallback.hidden = false;
+                if (tourHelper) tourHelper.hidden = true; // avoid redundant messaging
+            }
+        }, 5000);
+    }
+
     // Newsletter form - handled by MailerLite, no JS override needed
 
     // Lazy loading for images (native + fallback)

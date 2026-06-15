@@ -231,9 +231,9 @@
             <p class="section-intro">Half a million miles over six years. Catch Thomas live.</p>
 
             <!-- Bandsintown Integration -->
-            <div class="bandsintown-widget">
+            <div class="bandsintown-widget" id="bandsintown-widget">
                 <a class="bit-widget-initializer"
-                   data-artist-name="Thomas Hinds"
+                   data-artist-name="id_7267344"
                    data-display-local-dates="false"
                    data-display-past-dates="false"
                    data-auto-style="false"
@@ -244,6 +244,18 @@
                    data-link-text-color="#1a1a1a">
                 </a>
             </div>
+
+            <!-- Fallback shown only if the Bandsintown widget fails to render (script blocked, offline, or empty) -->
+            <div class="tour-fallback" id="tour-fallback" hidden>
+                <p>Having trouble loading live dates? See all of Thomas's upcoming shows on Bandsintown, get tour updates by email, or reach out about booking a show or house concert.</p>
+                <div class="tour-fallback-actions">
+                    <a href="https://www.bandsintown.com/a/7267344-thomas-hinds" class="btn btn-primary" target="_blank" rel="noopener">See All Tour Dates</a>
+                    <a href="#newsletter" class="btn btn-outline">Get Tour Updates</a>
+                </div>
+            </div>
+
+            <!-- Always-visible helper for when no dates are nearby -->
+            <p class="tour-helper">Don't see a date near you? <a href="https://www.bandsintown.com/a/7267344-thomas-hinds" target="_blank" rel="noopener">View all dates on Bandsintown</a>, <a href="#newsletter">join the mailing list</a>, or <a href="#contact">ask about a house concert</a>.</p>
 
         </div>
     </section>
@@ -410,7 +422,7 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="section newsletter-section">
+    <section id="newsletter" class="section newsletter-section">
         <div class="container">
             <div class="newsletter-content">
                 <h2>Stay Connected</h2>
