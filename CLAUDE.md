@@ -121,7 +121,7 @@ Evolved from initial dark/warm to a more refined editorial aesthetic evoking wor
 | Hero | Full-screen intro with streaming links, CTAs, moody hotel room background (landscape) |
 | Music | 4-album grid (Hotel Room Songs card with "Album Coming 2026" badge + 4 released singles: In My Head, Heart On A Line, Old Flames, Trouble With Sin, plus 3 past releases) with Spotify embed |
 | Campaign | "Help Make the Record" support section — Plaid Dog Recording crowdfunding for his first professionally-produced studio album (producer Ryan Gallagher, Boston; separate project from Hotel Room Songs). Trail of Dead Roses cover art (links to funding page) + bold "Back the Campaign" CTA, with the pitch video demoted to a small "Watch the campaign video" secondary link (opens YouTube in new tab) so it doesn't compete with the funding click. Also linked as "Support" in nav |
-| Tour | Bandsintown widget only (no hardcoded dates) |
+| Tour | Bandsintown widget (no hardcoded dates), matched by **artist ID** (`id_7267344`), with a JS graceful fallback if the widget renders blank |
 | About | Bio, stats (500K miles, #86 charts, 2 books), portrait photo, book cover thumbnails with Amazon links |
 | Press/EPK | Downloadable bios (TXT), photo gallery (15 images via lightbox), EPK/one-sheet (HTML+PDF) |
 | Videos | Featured video + YouTube channel embed |
@@ -254,6 +254,13 @@ Created downloadable Electronic Press Kit materials:
 - No need to maintain hardcoded dates that go stale
 - Widget auto-updates when Thomas adds shows
 
+### Bandsintown widget details & troubleshooting (June 2026)
+- **Artist ID:** Thomas's Bandsintown ID is **7267344** (page: bandsintown.com/a/7267344-thomas-hinds). The embed uses `data-artist-name="id_7267344"`, NOT the plain name. ID-based matching is Bandsintown's recommended, unambiguous form; name-based lookup is fragile (a name search even surfaced the unrelated Spanish band "Hinds"). ID sourced from Thomas's live BIT URL in his browser, not from automated lookup (Bandsintown bot-blocks server-side requests with 403).
+- **Graceful fallback:** `index.html` Tour section has a hidden `#tour-fallback` (prominent "See All Tour Dates" button → his BIT page) plus an always-visible `.tour-helper` line. `js/main.js` reveals the fallback if the widget renders no real content after 5s (checks for an iframe or visible text; BIT injects empty `<div class="bit-container">` scaffolding even on failure, so node-presence alone is NOT treated as success).
+- **The script auto-generates `app_id = "js_" + hostname`** (= `js_thomashindsmedia.com`); there is no `data-app-id` override on the public widget.
+- **If "tour dates broke" again:** first suspect Bandsintown, not our code. In June 2026 the section went blank because BIT's API returned HTTP 200 with a server-side Python crash (`'type' object is not subscriptable`) on the `js_` app_id path; it was a transient outage and recovered on its own. Diagnose by hitting `https://rest.bandsintown.com/V4/artists/id_7267344/events/?app_id=js_thomashindsmedia.com` directly. The durable fix if it ever persists is a fresh embed from Thomas's artist login (artists.bandsintown.com → Widget).
+- **Embed layout decision:** evaluated Bandsintown's richer "new method" (auto-style, all dates, start times, details, ticket buttons) on throwaway test pages. Rejected it: the centered, detail-heavy layout is far less dense (~4 events/screen vs ~8) and 3x the scroll. Kept the existing compact embed (`auto-style="false"`, custom dark colors, `display-limit="10"` + "Show All"). Note: `auto-style="false"` makes BIT ignore the `data-*-color` attributes for some elements, and two widgets on one page share a stylesheet (colors bleed) — only test color/contrast with a single widget.
+
 ### Booking flexibility
 - Thomas can perform: solo (most common), duo, trio, or full band
 - House concerts explicitly mentioned in contact section
@@ -298,9 +305,14 @@ EOF
 - [x] ~~Add book covers to About section~~ ✓ Done (thumbnails with Amazon links)
 - [x] ~~Connect contact form~~ ✓ Done (Formsubmit.co - thomashindsschedule@gmail.com, redirects to production URL)
 - [x] ~~Optimize images for web (compress)~~ ✓ Done (gallery images compressed, full-res kept for downloads)
-- [x] ~~Add presave announcement banner~~ ✓ Done (Jan 2026 - "Trouble With Sin" pre-save; updated April 2026 to "Heart On A Line" out-now banner with direct Spotify/Apple links)
+- [x] ~~Add presave announcement banner~~ ✓ Done (Jan 2026 - "Trouble With Sin" pre-save; April 2026 "Heart On A Line"; June 2026 updated to "In My Head" out-now banner with Spotify/Apple links)
 - [x] ~~Fix newsletter form~~ ✓ Done (custom JSONP handler with inline success message, loading state, error handling; confirmation emails may go to spam)
+- [x] ~~Add all four Hotel Room Songs singles~~ ✓ Done (June 2026 - In My Head, Heart On A Line, Old Flames, Trouble With Sin)
+- [x] ~~Add Plaid Dog crowdfunding campaign~~ ✓ Done (June 2026 - dedicated "Campaign" section, funding-first layout with cover art + CTA, video as secondary link; "Support" nav link)
+- [x] ~~Fix Tour section "broken" dates~~ ✓ Done (June 15, 2026 - root cause was a transient Bandsintown API outage, not our code; switched widget to artist-ID match `id_7267344` + added JS graceful fallback. See "Bandsintown widget details & troubleshooting")
+- [x] ~~Lighten page load~~ ✓ Done (June 15, 2026 - recompressed two oversized album covers (hotel-room-songs 989KB→120KB, trail-of-dead-roses 783KB→260KB) and added `loading="lazy"` to all 8 below-fold images; up-front image weight ~2.7MB→~0.3MB. Deliberately did NOT facade the Spotify/YouTube embeds or defer the BIT script — in-place playback is a feature, not worth regressing. Images are `immutable, max-age=1yr`; same-filename returning visitors keep cached copies, which is fine since content is identical — only bump a `?v=` if an image is swapped for a different one.)
 - [ ] Remove/update announcement banner when next single drops
+- [ ] Confirm Thomas's current location (site says "northern Georgia"; campaign page mentions both Cartersville GA and northeast CT)
 - [ ] Consider adding social feed (Juicer.io) - tabled for now, may add later
 
 ## Research Sources
@@ -314,4 +326,4 @@ EOF
 
 ---
 
-*Last updated: June 4, 2026*
+*Last updated: June 15, 2026*
